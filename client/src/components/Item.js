@@ -20,12 +20,18 @@ function Item(props) {
     return <h2>Loading item data...</h2>;
   }
 
-  //To Make a delete:
-  //1. Capture the click of the delete button
-  //2. Make an DELETE api call on the current item id.
-  //3. If delete was successful, Update state to reflect deleted item
-  //4. Redirect to item-list page.
-
+  
+  const handleDelete = ()=> {
+    //To Make a delete:
+    //1. Capture the click of the delete button
+    //2. Make an DELETE api call on the current item id.
+    //3. If delete was successful, Update state to reflect deleted item
+    //4. Redirect to item-list page.
+    axios.delete(`http://localhost:3333/items/${item.id}`)
+      .then(res => {
+        
+      })
+  }
 
   const handleEdit = ()=> {
     //To Make An Edit:
