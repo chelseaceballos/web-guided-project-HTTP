@@ -12,12 +12,14 @@ const initialItem = {
 
 const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
-  
+
   //3. Get the item info and add to the form
-  const id = props.match.params.id;
+  // const id = props.match.params.id;
+  const params = useParams();
+  const history = useHistory();
 
   useEffect(()=>{
-    axios.get(`http://localhost:3333/items/${id}`)
+    axios.get(`http://localhost:3333/items/${params.id}`)
     .then(res=>{
       setItem(res.data);
     })
@@ -43,12 +45,12 @@ const UpdateForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
     //4. Click the update button
-    axios.put(`http://localhost:3333/items/${id}`, item)
+    axios.put(`http://localhost:3333/items/${params.id}`, item)
       .then(res=> {
         props.setItems(res.data);
         
         //5. Redirect to the item page
-        props.history.push(`/item-list/${id}`);
+        history.push(`/item-list/${params.id}`);
       })
       .catch(err=> {
         console.log(err);
