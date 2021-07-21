@@ -48,7 +48,7 @@ const UpdateForm = props => {
       .then(res=> {
         console.log(res);
         //5. Redirect to the item page
-        
+        props.history.push(`/item-list/${id}`);
       })
       .catch(err=> {
         console.log(err);
