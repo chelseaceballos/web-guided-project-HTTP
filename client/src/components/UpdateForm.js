@@ -13,6 +13,10 @@ const initialItem = {
 const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
 
+  //3. Get the item info and add to the form
+  //4. Click the update button
+  //5. Redirect to the item page
+
   const changeHandler = ev => {
     ev.persist();
     let value = ev.target.value;
