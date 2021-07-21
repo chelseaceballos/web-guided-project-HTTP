@@ -24,7 +24,7 @@ const App = () => {
     };
 
     getItems();
-  }, [items]);
+  }, []);
 
   return (
     <div className="App">
