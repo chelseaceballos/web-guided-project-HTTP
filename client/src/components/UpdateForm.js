@@ -47,12 +47,14 @@ const UpdateForm = props => {
     axios.put(`http://localhost:3333/items/${id}`, item)
       .then(res=> {
         console.log(res);
+        //5. Redirect to the item page
+        
       })
       .catch(err=> {
         console.log(err);
       })
 
-    //5. Redirect to the item page
+    
   };
 
   return (
