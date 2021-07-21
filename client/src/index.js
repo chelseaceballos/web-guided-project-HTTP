@@ -24,7 +24,7 @@ const App = () => {
     };
 
     getItems();
-  }, []);
+  }, [items]);
 
   return (
     <div className="App">
@@ -52,7 +52,7 @@ const App = () => {
         render={props => <Item {...props} setItems={setItems} />}
       />
       <Route path="/item-form" component={ItemForm} />
-      
+
       {/* <Route path="/item-update/:id" render={(props)=>{
         return(<UpdateForm {...props} setItems={setItems}/>);
       }} /> */}
