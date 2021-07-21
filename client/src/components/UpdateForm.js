@@ -17,7 +17,7 @@ const UpdateForm = props => {
   
   useEffect(()=>{
     axios.get('http://localhost:3333/items/1')
-    .then(res=>
+    .then(res =>
       setItem(res.data);
     })
     .catch(err=> {
