@@ -15,11 +15,16 @@ const UpdateForm = props => {
 
   //3. Get the item info and add to the form
   
-  axios.get()
+  useEffect(()=>{
+    axios.get()
     .then(res=>{
+      console.log(res);
       setItem(res.data);
     })
-  
+    .catch(err=> {
+      console.log(err);
+    })
+  }, []);
 
   //4. Click the update button
   //5. Redirect to the item page
