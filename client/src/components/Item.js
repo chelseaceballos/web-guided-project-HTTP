@@ -24,7 +24,7 @@ function Item(props) {
     //To Make An Edit:
     //1. Capture click of the edit button
     //2. Redirect to our edit form
-    props.history.push('/');
+    props.history.push('/item-update');
     //3. Get the item info and add to the form
     //4. Click the update button
     //5. Redirect to the item page
