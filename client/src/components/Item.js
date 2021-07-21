@@ -24,7 +24,7 @@ function Item(props) {
     //To Make An Edit:
     //1. Capture click of the edit button
     //2. Redirect to our edit form
-    props.history.push('/item-update/3');
+    props.history.push(`/item-update/${id}`);
   }
 
   return (
