@@ -21,7 +21,12 @@ function Item(props) {
   }
 
   const handleEdit = ()=> {
-    
+    //To Make An Edit:
+    //1. Capture click of the edit button
+    //2. Redirect to our edit form
+    //3. Get the item info and add to the form
+    //4. Click the update button
+    //5. Redirect to the item page
   }
 
   return (
