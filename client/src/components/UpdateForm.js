@@ -14,11 +14,9 @@ const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
 
   //3. Get the item info and add to the form
-  const id = 1;
+  const id = props.match.params.id;
 
   useEffect(()=>{
-    console.log(props);
-    
     axios.get(`http://localhost:3333/items/${id}`)
     .then(res=>{
       setItem(res.data);
