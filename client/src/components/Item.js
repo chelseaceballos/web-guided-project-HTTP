@@ -25,7 +25,6 @@ function Item(props) {
   //2. Make an DELETE api call on the current item id.
   //3. If delete was successful, Update state to reflect deleted item
   //4. Redirect to item-list page.
-  
 
   const handleEdit = ()=> {
     //To Make An Edit:
