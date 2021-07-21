@@ -26,6 +26,7 @@ function Item(props) {
   //3. If delete was successful, Update state to reflect deleted item
   //4. Redirect to item-list page.
 
+
   const handleEdit = ()=> {
     //To Make An Edit:
     //1. Capture click of the edit button
@@ -62,7 +63,7 @@ function Item(props) {
       <button onClick={handleEdit} className="md-button">
         Edit
       </button>
-      <button className="md-button">
+      <button onClick={handleDelete}className="md-button">
         Delete
       </button>
     </div>
