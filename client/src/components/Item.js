@@ -20,6 +20,13 @@ function Item(props) {
     return <h2>Loading item data...</h2>;
   }
 
+  //To Make a delete:
+  //1. Capture the click of the delete button
+  //2. Make an DELETE api call on the current item id.
+  //3. If delete was successful, Update state to reflect deleted item
+  //4. Redirect to item-list page.
+  
+
   const handleEdit = ()=> {
     //To Make An Edit:
     //1. Capture click of the edit button
