@@ -46,8 +46,7 @@ const UpdateForm = props => {
     //4. Click the update button
     axios.put(`http://localhost:3333/items/${id}`, item)
       .then(res=> {
-        console.log(res);
-        //setItems(res.data);
+        props.setItems(res.data);
 
         //5. Redirect to the item page
         props.history.push(`/item-list/${id}`);
