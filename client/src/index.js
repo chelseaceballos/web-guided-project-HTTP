@@ -55,6 +55,7 @@ const App = () => {
       {/* <Route path="/item-update/:id" render={(props)=>{
         return(<UpdateForm {...props} setItems={setItems}/>);
       }} /> */}
+      
       <Route path="/item-update/:id">
         <UpdateForm setItems={setItems}/>
       </Route>
