@@ -33,6 +33,9 @@ function Item(props) {
         props.setItems(res.data);
         push('/item-list');
       })
+      .catch(err=>{
+        console.log(err);
+      })
   }
 
   const handleEdit = ()=> {
