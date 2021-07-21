@@ -34,8 +34,6 @@ const UpdateForm = props => {
     e.preventDefault();
   };
 
-  console.log(item);
-
   return (
     <div>
       <h2>Update Item</h2>
