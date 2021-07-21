@@ -26,8 +26,6 @@ const UpdateForm = props => {
     })
   }, []);
 
-  //4. Click the update button
-  //5. Redirect to the item page
 
   const changeHandler = ev => {
     ev.persist();
@@ -44,7 +42,14 @@ const UpdateForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    //4. Click the update button
     console.log("submit update");
+    axios.put(`http://localhost:3333/items/${id}`)
+      .then(res=> {
+        console.log(res);
+      })
+
+    //5. Redirect to the item page
   };
 
   return (
