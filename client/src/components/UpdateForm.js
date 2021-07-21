@@ -13,6 +13,7 @@ const initialItem = {
 const UpdateForm = props => {
   const [item, setItem] = useState(initialItem);
 
+  console.log(props);
   //3. Get the item info and add to the form
   const id = props.match.params.id;
 
