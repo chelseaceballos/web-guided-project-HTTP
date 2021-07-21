@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 import ItemDescription from './ItemDescription';
@@ -7,7 +7,7 @@ import ItemShipping from './ItemShipping';
 
 function Item(props) {
   const [item, setItem] = useState({});
-  const { id } = props.match.params;
+  const { id } = useParams();
 
   useEffect(()=>{
     axios.get(`http://localhost:3333/items/${id}`)
@@ -29,7 +29,8 @@ function Item(props) {
     //4. Redirect to item-list page.
     axios.delete(`http://localhost:3333/items/${item.id}`)
       .then(res => {
-        
+        props.setItems(res.data);
+
       })
   }
 
