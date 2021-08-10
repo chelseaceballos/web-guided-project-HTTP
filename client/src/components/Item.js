@@ -28,7 +28,8 @@ function Item(props) {
     axios
       .delete(`http://localhost:3333/items/${id}`)
       .then((res) => {
-        console.log(res);
+        setItems(res.data);
+        props.history.push("/item-list");
       })
       .catch((err) => console.log(err));
   };
