@@ -43,6 +43,7 @@ const UpdateForm = (props) => {
       .then((res) => {
         console.log(res);
         props.setItems(res.data);
+        props.history.push(`/item-list/${id}`);
       })
       .catch((err) => console.log(err));
   };
