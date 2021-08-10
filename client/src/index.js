@@ -16,10 +16,10 @@ const App = () => {
     const getItems = () => {
       axios
         .get("http://localhost:3333/items")
-        .then(res => {
+        .then((res) => {
           setItems(res.data);
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
     };
 
     getItems();
@@ -44,13 +44,14 @@ const App = () => {
       <Route
         exact
         path="/item-list"
-        render={props => <ItemsList {...props} items={items} />}
+        render={(props) => <ItemsList {...props} items={items} />}
       />
       <Route
         path="/item-list/:id"
-        render={props => <Item {...props} setItems={setItems} />}
+        render={(props) => <Item {...props} setItems={setItems} />}
       />
       <Route path="/item-form" component={ItemForm} />
+      <Route path="/item-update" component={UpdateForm} />
     </div>
   );
 };
