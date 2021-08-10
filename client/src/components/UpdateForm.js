@@ -37,11 +37,9 @@ const UpdateForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("working on  click", item);
     axios
       .put(`http://localhost:3333/items/${id}`, item)
       .then((res) => {
-        console.log(res);
         props.setItems(res.data);
         props.history.push(`/item-list/${id}`);
       })
