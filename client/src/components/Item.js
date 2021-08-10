@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useParams } from "react";
 import { Route, NavLink } from "react-router-dom";
 import axios from "axios";
 
@@ -7,7 +7,8 @@ import ItemShipping from "./ItemShipping";
 
 function Item(props) {
   const [item, setItem] = useState({});
-  const { id } = props.match.params;
+  // const { id } = props.match.params;
+  const { id } = useParams();
 
   console.log();
   useEffect(() => {
