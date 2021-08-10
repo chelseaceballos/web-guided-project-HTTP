@@ -18,6 +18,7 @@ const UpdateForm = (props) => {
       .get("http://localhost:3333/items/0")
       .then((res) => {
         console.log(res);
+        setItem(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
