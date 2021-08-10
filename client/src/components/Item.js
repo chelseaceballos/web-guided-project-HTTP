@@ -21,7 +21,7 @@ function Item(props) {
   }
 
   const handleEditClick = (e) => {
-    console.log("Clicked Edit");
+    console.log(props);
   };
 
   return (
