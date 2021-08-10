@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
@@ -7,13 +7,22 @@ const initialItem = {
   price: "",
   imageUrl: "",
   description: "",
-  shipping: ""
+  shipping: "",
 };
 
-const UpdateForm = props => {
+const UpdateForm = (props) => {
   const [item, setItem] = useState(initialItem);
 
-  const changeHandler = ev => {
+  useEffect(() => {
+    axios
+      .get("http://localhost:3333/items/0")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const changeHandler = (ev) => {
     ev.persist();
     let value = ev.target.value;
     if (ev.target.name === "price") {
@@ -22,11 +31,11 @@ const UpdateForm = props => {
 
     setItem({
       ...item,
-      [ev.target.name]: value
+      [ev.target.name]: value,
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
