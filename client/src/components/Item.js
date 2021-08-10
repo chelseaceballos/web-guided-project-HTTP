@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, NavLink, useParams } from "react-router-dom";
+import { Route, NavLink, useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
 import ItemDescription from "./ItemDescription";
@@ -9,6 +9,7 @@ function Item(props) {
   const [item, setItem] = useState({});
   // const { id } = props.match.params;
   const { id } = useParams();
+  const { push } = useHistory();
 
   console.log();
   useEffect(() => {
@@ -22,7 +23,8 @@ function Item(props) {
   }
 
   const handleEditClick = (e) => {
-    props.history.push(`/item-update/${id}`);
+    // props.history.push(`/item-update/${id}`);
+    push(`/item-update/${id}`);
   };
 
   const handleDeleteClick = () => {
