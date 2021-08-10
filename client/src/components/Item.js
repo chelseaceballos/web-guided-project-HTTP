@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useParams } from "react";
-import { Route, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, NavLink, useParams } from "react-router-dom";
 import axios from "axios";
 
 import ItemDescription from "./ItemDescription";
