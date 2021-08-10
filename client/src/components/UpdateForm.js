@@ -12,13 +12,11 @@ const initialItem = {
 
 const UpdateForm = (props) => {
   const [item, setItem] = useState(initialItem);
-  console.log(props);
   const id = props.match.params.id;
   useEffect(() => {
     axios
       .get(`http://localhost:3333/items/${id}`)
       .then((res) => {
-        console.log(res);
         setItem(res.data);
       })
       .catch((err) => console.log(err));
@@ -39,6 +37,7 @@ const UpdateForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("working on  click", item);
   };
 
   return (
