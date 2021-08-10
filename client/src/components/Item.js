@@ -24,6 +24,10 @@ function Item(props) {
     props.history.push(`/item-update/${id}`);
   };
 
+  const handleDeleteClick = () => {
+    console.log("i am here");
+  };
+
   return (
     <div className="item-wrapper">
       <div className="item-header">
@@ -53,7 +57,9 @@ function Item(props) {
       <button onClick={handleEditClick} className="md-button">
         Edit
       </button>
-      <button className="md-button">Delete</button>
+      <button onClick={handleDeleteClick} className="md-button">
+        Delete
+      </button>
     </div>
   );
 }
